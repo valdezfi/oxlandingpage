@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Whalex</title>
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        body{
+            background-color: #0E0E0E;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
+        }
+        a{
+            text-decoration: none;
+        }
+        .nav-logo{
+            width:50px;
+            height: auto;
+        }
+        .nav-links{
+            color:#0D0D0D;
+            font-weight: 500;
+            font-size: 12px;
+        }
+        .btn-txt{
+            color:#FFF;
+            font-size: 15.53px;
+        }
+        .btn-bg-dark{
+            background-color: #000000;
+        }
+        .btn-bg-special{
+            background: rgb(236,102,116);
+            background: -moz-linear-gradient(102deg, rgba(236,102,116,1) 0%, rgba(236,149,60,1) 54%);
+            background: -webkit-linear-gradient(102deg, rgba(236,102,116,1) 0%, rgba(236,149,60,1) 54%);
+            background: linear-gradient(102deg, rgba(236,102,116,1) 0%, rgba(236,149,60,1) 54%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ec6674",endColorstr="#ec953c",GradientType=1); 
+        }
+        .header-big-txt{
+            color: #FFFFFF;
+            font-size: 94.53px;
+            font-weight: 400;
+        }
+        .header-big-txt2{
+            color: #FFFFFF;
+            font-size: 60px;
+            font-weight: 500;
+        }
+        .header-special-txt{
+            color: #EF9567;
+            font-size: 80.45px;
+            font-weight: 300;
+        }
+        .header-special-txt2{
+            color: #EF9567;
+           
+        }
+        .header-special-border{
+            border:solid 1.51px #EF7D88;
+            width:400px;
+            padding-left: 40px;
+            transform: rotate(-3.76deg);
+        }
+        p{
+            color:#FFFFFF;
+            font-size: 18px;
+        }
+        .header-input-base{
+            width:392px;
+            height:auto;
+            padding: 5px 10px;
+        }
+        .txt-header-input-base-dark{
+            color:#0D0D0D;
+            font-size: 16px;
+        }
+        .header-input{
+            width:260px;
+            height: auto;
+            background-color: #0D0D0D;
+            padding: 10px 20px;
+            border: solid thin #0D0D0D;
+            color:#FFFFFF
+            
+        }
+        ::placeholder {
+        color: #FFFFFF;
+        opacity: 1; /* Firefox */
+        }
+
+        ::-ms-input-placeholder { /* Edge 12 -18 */
+        color: #FFFFFF;
+        }
+
+        .header-right-bg{
+            background-image: url('assets/header-art.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+        .header-right-bg2{
+            background-image: url('assets/header-art2.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+        .header-white-bg-text{
+            font-size: 32px;
+            font-weight: 400;
+            color: #0D0D0D;
+        }
+        .header-white-bg-text-heading{
+            font-size: 62.44px;
+            font-weight: 500;
+            color: #0D0D0D;
+        }
+        .header-white-bg-text-heading-text{
+            font-size: 19.51px;
+            font-weight: 300;
+            color: #0D0D0D;
+        }
+        .header-white-bg-text-heading-text2{
+            font-size: 18px;
+            font-weight: 500;
+            color: #FFFFFF;
+        }
+        .dark-heading{
+            font-size: 64px;
+            font-weight: 400;
+            color: #0D0D0D;
+        }
+        .white-heading{
+            font-size: 64px;
+            font-weight: 400;
+            color: #FFFFFF;
+        }
+        .black-thumb{
+            background-color: #0D0D0D;
+        }
+        .black-thumb-heading{
+            color: #FFF;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .black-thumb-text{
+            color: #FFF;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .black-thumb-image{
+            width:300px;
+            height: auto;
+            overflow: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .special-text{
+            color:#FF5C30;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .white-sub-heading{
+            font-size: 30px;
+            font-weight: 500;
+            color: #FFFFFF;
+        }
+        .no-bullets {
+            list-style-type: none;
+        }
+        .dark-div-2{
+            background-color: #121212;
+        }
+        .number{
+            font-size: 48px;
+            color:#9D96A8;
+            font-weight: 700;
+        }
+        .black-bold{
+            font-size: 20px;
+            font-weight: 600;
+            color:#0D0D0D;
+        }
+        .black-txt{
+            font-size: 18px;
+            font-weight: 400;
+            color:#0D0D0D;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row mt-5 mb-5">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary rounded-pill">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#"><img src="nav-logo.svg" class="nav-logo" alt="Logo" ></a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                          <li class="nav-item">
+                            <a class="nav-link active nav-links" aria-current="page" href="#">Features</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link nav-links" href="#">Marketplace</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link nav-links" href="#">Pricing</a>
+                          </li>
+                          
+                        </ul>
+                        <div class="d-flex pe-3" >
+                          
+                          <a class="btn btn-lg btn-bg-dark btn-txt rounded-pill me-4" type="submit">Login</a>
+                          <a class="btn btn-lg btn-bg-special btn-txt rounded-pill" type="submit">Signup</a>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="custom-container">
+            <div class="row p-5">
+                <div class="col-md-7">
+                    <h1 class="header-big-txt">Create Your</h1>
+                    <div class="header-special-border rounded-pill">
+                        <h2 class="header-special-txt">Website</h2>
+                    </div>
+                    
+                    <h3 class="header-big-txt">in Seconds</h3>
+                    <p>
+                        You customize the experience where as we create <br>
+                        incentives to amplify all your links in one place in<br> 
+                        order to grow your auidence and sales.
+                    </p>
+                    <div class=" header-input-base btn-bg-special rounded-3">
+                        <input type="text" class="header-input rounded-3" placeholder="my0x.co/ yourname">
+                        <a href="#" class="txt-header-input-base-dark ">Try 0x Free</a>
+                        
+                    </div>
+                </div>
+                <div class="col-md-5 header-right-bg">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid  bg-white">
+        <div class="custom-container">
+            <div class="row p-5">
+                <div class="col-md-4 ">
+                    <p class="header-white-bg-text">Our Numbers  speaks<br>
+                        more about us</p>
+                </div>
+                <div class="col-md-8 ">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="row">
+                                <p class="header-white-bg-text-heading">10k+</p>
+                            </div>
+                            <div class="row">
+                                <p class="header-white-bg-text-heading-text">Active Users</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <p class="header-white-bg-text-heading">2M+</p>
+                            </div>
+                            <div class="row">
+                                <p class="header-white-bg-text-heading-text">Active Subscribers</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <p class="header-white-bg-text-heading">4M+</p>
+                            </div>
+                            <div class="row">
+                                <p class="header-white-bg-text-heading-text">Active Clicks</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="custom-container">
+            <div class="row p-5">
+                <div class="col-md-7">
+                    <h1 class="header-big-txt2">Build a community<br> 
+                        with your link in bio(s)</h1>
+                    <p class="header-white-bg-text-heading-text2 pt-5 pb-5">Add your unique 0x URL to all platforms and places you find<br>
+                        your audience. We provide the NFT collectible rewards to <br>
+                        distribute to your super followers.</p>
+                        <button class="btn btn-lg btn-bg-special btn-txt rounded-2">Get Started for Free</button>
+                </div>
+                <div class="col-md-5 header-right-bg2">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="custom-container ">
+            <div class="row p-5 ">
+                <div class="row ">
+                    <div class="container bg-white rounded-5 pb-5">
+                        
+                            <h2 class="p-5 text-center dark-heading">Unmatch Features</h2>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-4 black-thumb p-3 rounded-5 m-3 ">
+                                <div class="row">
+                                    <img src="assets/header-art2.svg" class="black-thumb-image" alt="thumb">
+                                </div>
+                                <div class="row pt-5">
+                                    <p class="text-center black-thumb-heading">Reward Your Audience  </p>
+                                </div>
+                                <div class="row pt-1 pb-5">
+                                    <p class="text-center black-thumb-text">We can help you address one of the biggest challenges <br>
+                                        in the creator economy: Grow, own and engage your audience <br>
+                                        by unifying them in one place.  </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 black-thumb p-3 rounded-5 m-3">
+                                <div class="row">
+                                    <img src="assets/1.svg" class="black-thumb-image" alt="thumb">
+                                </div>
+                                <div class="row pt-5">
+                                    <p class="text-center black-thumb-heading">Buy and Collect </p>
+                                </div>
+                                <div class="row pt-1 pb-5">
+                                    <p class="text-center black-thumb-text">Allow your followers to buy and generate <br>
+                                        collectibles from every purchase. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-4 black-thumb p-3 rounded-5 m-3 ">
+                                <div class="row">
+                                    <img src="assets/2.svg" class="black-thumb-image" alt="thumb">
+                                </div>
+                                <div class="row pt-5">
+                                    <p class="text-center black-thumb-heading">Keep track of everything   </p>
+                                </div>
+                                <div class="row pt-1 pb-5">
+                                    <p class="text-center black-thumb-text">Every member will receive their analytics as we<br>
+                                        help scale with 0x Blue Whale. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 black-thumb p-3 rounded-5 m-3">
+                                <div class="row">
+                                    <img src="assets/3.svg" class="black-thumb-image" alt="thumb">
+                                </div>
+                                <div class="row pt-5">
+                                    <p class="text-center black-thumb-heading">Community based commerce</p>
+                                </div>
+                                <div class="row pt-1 pb-5">
+                                    <p class="text-center black-thumb-text">We are a community first that meetup weekly with <br>
+                                        store creators to discuss growth and sale strategies.  </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="mb-5 mt-4">
+                            <img src="assets/f.png" alt="frame" class="">
+                        </div>-->
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="custom-container ">
+            <div class="row p-5 ">
+                <div class="row ">
+                    <div class="container pb-5">
+                        
+                        <div class="row">
+                            <div class="col-md-10">
+                                <p class="white-heading"><b class="special-text">How it works!</b><br>Simple Steps</p>
+                            </div>
+                            <div class="col-md-2 ">
+                                <button class="mt-5 btn btn-lg btn-bg-special btn-txt rounded-2">Get Started for Free</button>
+                            </div>
+                        </div>
+                            
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-3 black-thumb p-3 rounded-5 m-3 ">
+                                <div class="row">
+                                    <img src="assets/f1.svg" class="black-thumb-image" alt="thumb">
+                                </div>
+                            </div>
+                            <div class="col-md-3 black-thumb p-3 rounded-5 m-3">
+                                <div class="row">
+                                    <img src="assets/f2.svg" class="black-thumb-image" alt="thumb">
+                                </div>
+                            </div>
+                            <div class="col-md-3 black-thumb p-3 rounded-5 m-3">
+                                <div class="row">
+                                    <img src="assets/f3.svg" class="black-thumb-image" alt="thumb">
+                                </div> 
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="custom-container ">
+            <div class="row p-5 ">
+                <div class="row ">
+                    <div class="container pb-5">
+                        
+                        <div class="row">
+                            <div class="col-md-10">
+                                <p class="white-heading">The fast, friendly<br>
+                                    amplify link in bio tool<br><b class="special-text">Made for creators, thought leaders, achievers,
+                                        game changer, and you.</b></p>
+                            </div>
+                            <div class="col-md-2 ">
+                                <button class="mt-5 btn btn-lg bg-white  rounded-2">Explore all plans</button>
+                            </div>
+                        </div>
+                            
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-3 black-thumb p-3 rounded-5 m-3 border border-white">
+                                <div class="row">
+                                    <p class="white-sub-heading">Basic Package </p>
+                                    <p >$20 / Year</p>
+                                    <p class="black-thumb-text">Ungrade your 0x experience! Go Pro and get
+                                        access to Pro-exclusive features Like:</p>
+                                    <ul class="black-thumb-text no-bullets">
+                                        <li><i class="fa-regular fa-square-full"></i>More Sites</li>
+                                        <li><i class="fa-solid fa-xmark"></i>Customise Domains</li>
+                                        <li><i class="fa-solid fa-xmark"></i>Widgets + Embeds</li>
+                                        <li><i class="fa-solid fa-xmark"></i>Goggle Analytics</li>
+                                        <li><i class="fa-solid fa-xmark"></i>Branded Collectibles</li>
+                                        <li><i class="fa-solid fa-xmark"></i>Private Labelling</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3 black-thumb p-3 rounded-5 m-3 border border-white">
+                                <p class="white-sub-heading">Standard Package </p>
+                                    <p >$40 / Year</p>
+                                    <p class="black-thumb-text">Ungrade your 0x experience! Go Pro and get
+                                        access to Pro-exclusive features Like:</p>
+                                    <ul class="black-thumb-text no-bullets">
+                                        <li><i class="fa-regular fa-square-full"></i>More Sites</li>
+                                        <li><i class="fa-solid fa-xmark"></i>Customise Domains</li>
+                                        <li><i class="fa-solid fa-xmark"></i>Widgets + Embeds</li>
+                                        <li><i class="fa-solid fa-xmark"></i>Goggle Analytics</li>
+                                        <li><i class="fa-solid fa-xmark"></i>Branded Collectibles</li>
+                                        <li><i class="fa-solid fa-xmark"></i>Private Labelling</li>
+                                    </ul>
+                            </div>
+                            <div class="col-md-3 black-thumb p-3 rounded-5 m-3 border border-white">
+                                <p class="white-sub-heading">Premium Package </p>
+                                    <p >$60 / Year</p>
+                                    <p class="black-thumb-text">Ungrade your 0x experience! Go Pro and get
+                                        access to Pro-exclusive features Like:</p>
+                                    <ul class="black-thumb-text no-bullets">
+                                        <li><i class="fa-regular fa-square-full"></i>More Sites</li>
+                                        <li><i class="fa-solid fa-xmark"></i>Customise Domains</li>
+                                        <li><i class="fa-solid fa-xmark"></i>Widgets + Embeds</li>
+                                        <li><i class="fa-solid fa-xmark"></i>Goggle Analytics</li>
+                                        <li><i class="fa-solid fa-xmark"></i>Branded Collectibles</li>
+                                        <li><i class="fa-solid fa-xmark"></i>Private Labelling</li>
+                                    </ul>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="custom-container ">
+            <div class="row p-5 ">
+                <div class="row ">
+                    <div class="container pb-5">
+                        <h4 class="header-big-txt2 text-center">Loved by <b class="header-special-txt2">100,000+</b><br>creators </h4>
+                        <div class="row d-flex justify-content-center">
+                            <img src="assets/f11.png" alt="yjumb">
+                        <b class="white-sub-heading text-center mt-5">"0xwhale simplifies the  process for creators to <br>
+                            share multiple parts of themselves in one inclusive link. “</b>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="custom-container ">
+            <div class="row p-5 ">
+                <div class="row ">
+                    <div class="container">
+                        <h4 class="header-big-txt2 text-center">Frequently Asked<br>Questions</h4>
+                        <div class="col-md-12 dark-div-2 p-3 mb-5">
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <p class="number text-center p-3">01</p>
+                                </div>
+                                <div class="col-md-10 p-3">
+                                    <p class="white-sub-heading">How can I customise my 0x link and brand?</p>
+                                    <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print. Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print</p>
+                                </div>
+                                <div class="col-md-1 p-3">
+                                    <img src="assets/arrow.png" alt="arrow">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 dark-div-2 p-3 mb-5">
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <p class="number text-center p-3">02</p>
+                                </div>
+                                <div class="col-md-10 p-3">
+                                    <p class="white-sub-heading">How can I customise my 0x link and brand?</p>
+                                    <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print. Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print</p>
+                                </div>
+                                <div class="col-md-1 p-3">
+                                    <img src="assets/arrow.png" alt="arrow">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 dark-div-2 p-3 mb-5">
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <p class="number text-center p-3">03</p>
+                                </div>
+                                <div class="col-md-10 p-3">
+                                    <p class="white-sub-heading">How can I customise my 0x link and brand?</p>
+                                    <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print. Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print</p>
+                                </div>
+                                <div class="col-md-1 p-3">
+                                    <img src="assets/arrow.png" alt="arrow">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="custom-container ">
+            <div class="row p-5 ">
+                <div class="row ">
+                    <div class="container ">
+                        
+                        <div class="col-md-6 bg-white rounded-5 p-3 mb-5 ms-auto me-auto">
+                            <div class="row p-5">
+                                <h2 class="text-center  text-center dark-heading">Unmatch Features</h2>
+                                <p class=" text-center header-white-bg-text-heading-text">You customise the experience and amplify your links in one place.</p>
+                                <div class="ms-auto me-auto mt-2 header-input-base btn-bg-special rounded-3">
+                                    <input type="text" class="header-input rounded-3" placeholder="my0x.co/ yourname">
+                                    <a href="#" class="txt-header-input-base-dark ">Try 0x Free</a>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-white">
+        <div class="custom-container ">
+            <div class="row ">
+                <div >
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2 p-3">
+                                <p class="black-bold">Company</p>
+                                <p><a href="#" class="black-txt">About Us</a></p>
+                                <p><a href="#" class="black-txt">0x Blog</a></p>
+                                <p><a href="#" class="black-txt">Marketplace</a></p>
+                                <p><a href="#" class="black-txt">Terms of Use</a></p>
+                            </div>
+                            <div class="col-md-3 p-3">
+                                <p class="black-bold">Community</p>
+                                <p><a href="#" class="black-txt">2023 Creator Report</a></p>
+                                <p><a href="#" class="black-txt">0x for Enterprises</a></p>
+                                <p><a href="#" class="black-txt">Creator Profile Directory</a></p>
+                                <p><a href="#" class="black-txt">Charities</a></p>
+                            </div>
+                            <div class="col-md-2 p-3">
+                                <p class="black-bold">Support</p>
+                                <p><a href="#" class="black-txt">Help Topics</a></p>
+                                <p><a href="#" class="black-txt">Get Started</a></p>
+                                <p><a href="#" class="black-txt">0x Packages</a></p>
+                                <p><a href="#" class="black-txt">FAQ</a></p>
+                            </div>
+                            <div class="col-md-2 p-3">
+                                <p class="black-bold">Quick Links</p>
+                                <p><a href="#" class="black-txt">Privacy Notice</a></p>
+                                <p><a href="#" class="black-txt">Trust Center</a></p>
+                                <p><a href="#" class="black-txt">0x Packages</a></p>
+                                <p><a href="#" class="black-txt">Report a violation</a></p>
+                            </div>
+                            <div class="col-md-3 p-3">
+                                <p class="black-bold">Contact Us</p>
+                                <p><a href="#" class="black-txt">+234 (0) *** *** ****</a></p>
+                                <p><a href="#" class="black-txt">+234 (0) *** *** ****</a></p>
+                                <p><a href="#" class="black-txt">support@0xwhale.com</a></p>
+                                <p><a href="#" class="black-txt">Maxico</a></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 pt-2 pb-2">
+                                <a class="btn btn-lg btn-bg-dark btn-txt rounded-2 me-4" type="submit">Login</a>
+                                <a class="btn btn-lg btn-bg-special btn-txt rounded-2" type="submit">Get started for free</a>
+                            </div>
+
+                            
+                          
+                        </div>
+                        <div class="row">
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="row border-top mt-5 p-5">
+                <div class="col-md-6">
+                    <p class="black-txt text-left">&copy; whale0x 2023, All right reserved</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p class="black-txt">Photos by Freepik</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  </body>
+</html>
